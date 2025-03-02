@@ -46,9 +46,11 @@ import A4 from "../../assets/images/IMG_5258-min.jpg";
 
 import ReactPlayer from "react-player/youtube";
 import { useNavigate } from "react-router-dom";
-import S2 from '../../assets/images/S2.jpg';
-import S3 from '../../assets/images/S3.jpg';
-import S1 from '../../assets/images/Slide1.jpg';
+import S1 from "../../assets/images/IntroSlides/1.PNG"
+import S2 from "../../assets/images/IntroSlides/2.PNG"
+import S3 from "../../assets/images/IntroSlides/3.PNG"
+import S4 from "../../assets/images/IntroSlides/4.PNG"
+import S5 from "../../assets/images/IntroSlides/5.PNG"
 
 import P103 from '../../assets/images/part/1.jpg';
 import P94 from '../../assets/images/part/10.jpg';
@@ -859,6 +861,22 @@ const Home = () => {
 
               />
             </div>
+            <div className={styles.slideImage}>
+              <img
+                src={S4}
+                width={'100%'}
+                height={'100%'}
+
+              />
+            </div>
+            <div className={styles.slideImage}>
+              <img
+                src={S5}
+                width={'100%'}
+                height={'100%'}
+
+              />
+            </div>
           </Slider>
           <div className={styles.introText}>
             <span className={styles.olympTitle}>
@@ -891,10 +909,10 @@ const Home = () => {
                 торжественные церемонии открытия и закрытия, а также незабываемый заряд вдохновения.
               </div>
               <div className={styles.right}>
-              Вторая Дальневосточная хоровая Олимпиада стала самым крупным хоровым конкурсом в России,
-              включившим в себя 110 хоров с общим количеством  конкурсантов более 2500 человек.
-              Вместе с вами мы можем сделать  Олимпиаду доброй традицией и внести небольшой,
-              но значимый вклад в поддержку и развитие хорового искусства!
+                Вторая Дальневосточная хоровая Олимпиада стала самым крупным хоровым конкурсом в России,
+                включившим в себя 110 хоров с общим количеством  конкурсантов более 2500 человек.
+                Вместе с вами мы можем сделать  Олимпиаду доброй традицией и внести небольшой,
+                но значимый вклад в поддержку и развитие хорового искусства!
               </div>
             </div>
 
@@ -1037,8 +1055,8 @@ const Home = () => {
       </FadeInSection>
       <FadeInSection>
         <div className={styles.wrapper}>
-          <div className={styles.documents} id={"documents"}>
-            <span className={styles.documentsTitle}>документы</span>
+          <div className={styles.rules} id={"documents"}>
+            <span className={styles.rulesTitle}>документы</span>
             <div className={styles.documentsContent}>
               <div className={styles.documentsButtons}>
                 <div className={styles.documentsButton}>
@@ -1267,10 +1285,6 @@ const Home = () => {
                 <VenueCard
                   img={V6}
                   place="Католический собор <br/> Пресвятой Богородицы"
-                />
-                <VenueCard
-                  img={V7}
-                  place="Центральная Музыкальная Школа<br/>филиал «Приморский»"
                 />
               </div>
             </div>
