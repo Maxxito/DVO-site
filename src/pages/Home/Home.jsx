@@ -925,7 +925,7 @@ const Home = () => {
       <FadeInSection>
         <div className={styles.wrapper}>
           <div className={styles.rules} id={"rules"}>
-            <span className={styles.rulesTitle}>ПРОГРАММА</span>
+            <span className={styles.Title}>ПРОГРАММА</span>
             <div className={styles.rulesContent}>
               <Accordion allowZeroExpanded>
                 <AccordionItem>
@@ -1056,7 +1056,7 @@ const Home = () => {
       <FadeInSection>
         <div className={styles.wrapper}>
           <div className={styles.rules} id={"documents"}>
-            <span className={styles.rulesTitle}>документы</span>
+            <span className={styles.Title}>документы</span>
             <div className={styles.documentsContent}>
               <div className={styles.documentsButtons}>
                 <div className={styles.documentsButton}>
@@ -1087,7 +1087,7 @@ const Home = () => {
       <FadeInSection>
         <div className={styles.wrapper}>
           <div className={styles.participants} id="participants">
-            <div className={styles.paragraphTitle}>участники 2023</div>
+            <div className={styles.Title}>участники 2023</div>
 
             <div
               className={styles.participantsTable}
@@ -1121,14 +1121,14 @@ const Home = () => {
       </FadeInSection>
       <FadeInSection>
         <div className={styles.wrapper}>
-          <div className={styles.about} id="jury">
-          <div className={styles.juryTitle} style={{textAlign:'left'}}>ЖЮРИ</div>
+          <div className={styles.jury} id="jury">
+          <div className={styles.Title}>ЖЮРИ</div>
           <div className={styles.left} style={{textAlign:'left'}}>Cписок жюри будет обновлен позже</div>
             <div className={styles.juryList}>
 
               
 
-              {/*<ControlledRefModalJury
+              <ControlledRefModalJury
                 trigger={
                   <div className={styles.juryItem}>
                     <img src={J1} width={265} height={345} alt="jury" />
@@ -1252,7 +1252,7 @@ const Home = () => {
                 Организатор и участник экспедиций в Орловскую, Иркутскую области, республику Бурятию, Приморский край. Вместе со студентами и выпускниками колледжа искусств проводит просветительскую деятельность для жителей Приморского края посредством организаций различных мероприятий, создание лекционных концертных программ, музыкальных спектаклей. Под руководством Татьяны Сергеевой учащиеся и выпускники отделения проводят исследовательскую, экспедиционную работу местной народной традиции, стараясь зафиксировать ее как можно полнее, внедрить в образовательный процесс и исполнить записанные песенные образцы. Студенты её класса  постоянно участвуют в профессиональных вокальных конкурах от краевого до международного уровня.
                 Отмечена многочисленными почетными грамотами, благодарностями от департамента культуры Приморского края, Хабаровского края, Иркутской области. 
                 "
-              />*/}
+              />
             </div>
           </div>
         </div>
