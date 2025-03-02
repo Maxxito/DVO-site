@@ -1,2 +1,2 @@
 # DVO-site
-Wbsite for Far Eastern Choir olympics
+Website for Far Eastern Choir olympics
