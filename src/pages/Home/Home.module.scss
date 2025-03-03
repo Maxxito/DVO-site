@@ -513,7 +513,7 @@
     gap: 30px;
     margin-bottom: 30px;
     transition: all 0.3s ease;
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
         div {
             min-width: 180px;
             
@@ -548,7 +548,10 @@
 .documentsButton {
     border: 2px solid #134D6F;
     border-radius: 8px;
-    height: 176px;
+    padding: 20px;
+    @media (max-width: 700px){
+        width: 300px;
+    }
 }
 
 .documentsButton a {

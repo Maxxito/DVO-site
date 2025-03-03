@@ -1071,7 +1071,7 @@ const Home = () => {
                     Регламент <br /> участия и пребывания
                   </a>
                 </div>
-                <div className={styles.downloadProgram}>
+                <div className={styles.documentsButton}>
                   <a href="/ВСЕ.pdf" download={"Расписание.pdf"}>
                     <img alt="pdf" src={pdfLogo} width={80} height={100} />
                     ОБЩЕЕ РАСПИСАНИЕ
