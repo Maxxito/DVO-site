@@ -62,7 +62,7 @@ export const Footer = () => {
                     <Icons type='sponsor4' className={styles.rf} width={204} height={71}/>
                 </div>
                 <div className={styles.copyright}>
-                © Дальневосточная хоровая олимпиада, 2023
+                © Дальневосточная хоровая олимпиада, 2025
                 </div>
             </div>
         </footer>
