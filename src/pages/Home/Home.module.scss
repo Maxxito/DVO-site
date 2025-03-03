@@ -1004,6 +1004,7 @@ line-height: 22px; /* 137.5% */
     width: 277px;
     height: 288px;
     margin-bottom: 20px;
+    overflow: hidden;
 }
 
 .galleryButtons {
@@ -1026,7 +1027,6 @@ line-height: 22px; /* 137.5% */
 }
 
 .photosAlbums {
-    width: 100%;
     display: flex;
     align-items: center;
     overflow: hidden;

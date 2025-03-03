@@ -182,6 +182,7 @@
 
   .toggle {
     display: block;
+    right: 60px;
   }
 
   .mobileNav {
@@ -191,10 +192,6 @@
   .header {
     width: 100%;
     grid-template-columns: 1fr;
-  }
-
-  .toggle {
-    right: 60px;
   }
 
   .networks {
