@@ -20,7 +20,7 @@
   height: 100px;
   background-color: #ffffff;
   padding: 20px;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto 1fr auto auto;
   z-index: 100;
 }
 
@@ -48,7 +48,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 100%;
   ul {
     max-width: 100%;
   }
@@ -111,9 +110,20 @@
   right: 25px;
   width: 55px;
   height: 55px;
-  border-radius: 50%;
   background: transparent;
   z-index: 1001;
+}
+
+.LangButton {
+  margin: 0 20px 0 20px;
+  overflow: hidden;
+  height: 26px;
+  width: 26px;
+  border-radius: 100%;
+  border: 2px solid #92C4CA;
+  & :hover{
+    cursor: pointer;
+  }
 }
 
 .mobileNav {
@@ -183,13 +193,9 @@
     display: block;
   }
 
-  .mobileNav {
-    display: block;
-  }
-
   .header {
     width: 100%;
-    grid-template-columns: 1fr;
+    grid-template-columns: auto auto auto;
   }
 
   .networks {

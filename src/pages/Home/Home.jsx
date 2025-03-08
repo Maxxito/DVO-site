@@ -1,6 +1,8 @@
 import { useAnimation } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import { withLayout } from "../../layout/Layout";
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
 
 import {
   Accordion,
@@ -154,6 +156,29 @@ import P9 from '../../assets/images/part/96.jpg';
 import P8 from '../../assets/images/part/97.jpg';
 import P7 from '../../assets/images/part/98.jpg';
 import P6 from '../../assets/images/part/99.jpg';
+import i18n from "i18next";
+import { useTranslation, initReactI18next } from "react-i18next";
+
+
+
+i18n.use(initReactI18next).init({
+  resources: {
+    en: {
+      translation: {
+        descriptionleft: "Left",
+        descriptionright: "Right"
+      }
+    },
+    ru: {
+      translation: {
+        descriptionright: "Вторая Дальневосточная хоровая Олимпиада стала самым крупным хоровым конкурсом в России, включившим в себя 110 хоров с общим количеством конкурсантов более 2500 человек. Вместе с вами мы можем сделать Олимпиаду доброй традицией и внести небольшой, но значимый вклад в поддержку и развитие хорового искусства!",
+        descriptionleft: "С 27 октября по 1 ноября 2025 года во Владивостоке пройдет III Дальневосточная хоровая олимпиада. Третья хоровая олимпиада - это международный конкурс, который включает в себя конкурсные прослушивания в 12 номинациях, фестивальные концерты, мастер-классы от членов жюри мирового уровня, торжественные церемонии открытия и закрытия, а также незабываемый заряд вдохновения.",
+      }
+    }
+  },
+  lng: "ru", 
+  fallbackLng: "ru"
+});
 
 function FadeInSection(props) {
   const [isVisible, setVisible] = React.useState(false);
@@ -185,6 +210,8 @@ function FadeInSection(props) {
 
 // TODO: connect i18n
 const Home = () => {
+
+  const { t } = useTranslation();
 
   const width = useWindowSize().width;
   const [settingsNews, setSettingsNews] = useState({
@@ -840,40 +867,30 @@ const Home = () => {
             <div className={styles.slideImage}>
               <img
                 src={S1}
-                width={'100%'}
-                height={'100%'}
 
               />
             </div>
             <div className={styles.slideImage}>
               <img
                 src={S2}
-                width={'100%'}
-                height={'100%'}
 
               />
             </div>
             <div className={styles.slideImage}>
               <img
                 src={S3}
-                width={'100%'}
-                height={'100%'}
 
               />
             </div>
             <div className={styles.slideImage}>
               <img
                 src={S4}
-                width={'100%'}
-                height={'100%'}
 
               />
             </div>
             <div className={styles.slideImage}>
               <img
                 src={S5}
-                width={'100%'}
-                height={'100%'}
 
               />
             </div>
@@ -902,17 +919,10 @@ const Home = () => {
 
             <div className={styles.aboutDescription}>
               <div className={styles.left}>
-                С 27 октября по 1 ноября 2025 года во Владивостоке пройдет
-                III Дальневосточная хоровая олимпиада. Третья хоровая олимпиада -
-                это международный конкурс, который включает в себя конкурсные прослушивания в 12 номинациях,
-                фестивальные концерты, мастер-классы от членов жюри мирового уровня,
-                торжественные церемонии открытия и закрытия, а также незабываемый заряд вдохновения.
+                {t('descriptionleft')}
               </div>
               <div className={styles.right}>
-                Вторая Дальневосточная хоровая Олимпиада стала самым крупным хоровым конкурсом в России,
-                включившим в себя 110 хоров с общим количеством  конкурсантов более 2500 человек.
-                Вместе с вами мы можем сделать  Олимпиаду доброй традицией и внести небольшой,
-                но значимый вклад в поддержку и развитие хорового искусства!
+                {t('descriptionright')}
               </div>
             </div>
 
@@ -1033,17 +1043,9 @@ const Home = () => {
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <p>
-                      В рамках Дальневосточной хоровой олимпиады пройдут торжественные церемонии открытия и закрытия, а также фестивальные концерты участников на лучших площадках Владивостока.
-                    </p>
-                  </AccordionItemPanel>
-                </AccordionItem>
-                <AccordionItem>
-                  <AccordionItemHeading>
-                    <AccordionItemButton>КУРСЫ ПОВЫШЕНИЯ КВАЛИФИКАЦИИ </AccordionItemButton>
-                  </AccordionItemHeading>
-                  <AccordionItemPanel>
-                    <p>
-                      Допускается участие в мероприятиях Олимпиады всех желающих в качестве слушателей с получением удостоверения о прохождении курсов повышения квалификации в объеме 36 часов. Участники курсов получат возможность посещения всех конкурсных прослушиваний, фестивальных концертов, мастер-классов, церемоний открытия и закрытия Олимпиады, круглого стола для руководителей.
+                    Все участники хоровой олимпиады получат возможность принять участие  
+в мастер-классах от членов жюри, хоровых дирижеров и композиторов  
+мирового уровня.
                     </p>
                   </AccordionItemPanel>
                 </AccordionItem>

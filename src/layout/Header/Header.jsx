@@ -14,6 +14,8 @@ import { Logo } from "../../components/Logo";
 import vkLogo from "../../assets/icons/vk-logo.svg";
 import youtubeLogo from "../../assets/icons/youtube.svg";
 import Icons from "../../common/icons";
+import { Button, DropdownButton } from "react-bootstrap";
+
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -203,7 +205,6 @@ export const Header = () => {
             </ul>
             <motion.nav
               initial={false}
-              className={styles.mobileNav}
               animate={isOpen ? "open" : "closed"}
               custom={height}
               ref={containerRef}
@@ -215,7 +216,9 @@ export const Header = () => {
               <MenuToggle toggle={() => toggleOpen()} />
             </motion.nav>
           </menu>
-
+          {/*<div className={styles.LangButton}>
+            <Icons type='ruflag'></Icons>
+          </div>*/}
           <div className={styles.networks}>
             <Icons type='vk' className={styles.vk} width={24} height={24} onClick={() => openVk()} />
             <Icons type='youtube' className={styles.youtube} width={24} height={24} onClick={() => openYoutube()} />
