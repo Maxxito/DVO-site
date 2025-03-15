@@ -197,7 +197,7 @@ export const Header = () => {
           <menu className={styles.menuWrapper}>
             <ul className={styles.menu}>
               {/*<li className={styles.FormButton}>
-                <a>Заявка</a>
+                <a href="/form">Заявка</a>
               </li>*/}
               {menu.map((menuItem) => (
                 <li key={menuItem.link} className={styles.menuItem}>
