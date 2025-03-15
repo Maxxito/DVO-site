@@ -918,16 +918,16 @@ const Home = () => {
             </div>
 
             <div className={styles.aboutDescription}>
-              <div className={styles.left}>
+              <div>
               С 27 октября по 1 ноября 2025 года во Владивостоке пройдет III Дальневосточная хоровая олимпиада. Третья хоровая олимпиада - это международный конкурс, который включает в себя конкурсные прослушивания в 12 номинациях, фестивальные концерты, мастер-классы от членов жюри мирового уровня, торжественные церемонии открытия и закрытия, а также незабываемый заряд вдохновения."
               </div>
-              <div className={styles.right}>
+              <div>
               Вторая Дальневосточная хоровая Олимпиада стала самым крупным хоровым конкурсом в России, включившим в себя 110 хоров с общим количеством конкурсантов более 2500 человек. Вместе с вами мы можем сделать Олимпиаду доброй традицией и внести небольшой, но значимый вклад в поддержку и развитие хорового искусства!
               </div>
             </div>
 
             <div className={styles.video}>
-              <ReactPlayer url='https://www.youtube.com/watch?v=Bjo2Mwu63f0' width={'100%'} height={500} />
+              <ReactPlayer url='https://www.youtube.com/watch?v=Bjo2Mwu63f0' width={'100%'} height={"0px"} />
             </div>
           </div>
         </div>
@@ -935,7 +935,7 @@ const Home = () => {
       <FadeInSection>
         <div className={styles.wrapper}>
           <div className={styles.rules} id={"rules"}>
-            <span className={styles.Title}>ПРОГРАММА</span>
+            <span className={styles.Title} id={"programm"}>ПРОГРАММА</span>
             <div className={styles.rulesContent}>
               <Accordion allowZeroExpanded>
                 <AccordionItem>
@@ -1062,19 +1062,19 @@ const Home = () => {
             <div className={styles.documentsContent}>
               <div className={styles.documentsButtons}>
                 <div className={styles.documentsButton}>
-                  <a href="/ПОЛОЖЕНИЕ 2023.pdf" download={"ПОЛОЖЕНИЕ 2023.pdf"}>
+                  <a href="/ПОЛОЖЕНИЕ 2023.pdf" download={"ПОЛОЖЕНИЕ 2025.pdf"}>
                     <img alt="pdf" src={pdfLogo} width={80} height={100} />
                     ПОЛОЖЕНИЕ ОБ <br /> ОЛИМПИАДЕ
                   </a>
                 </div>
                 <div className={styles.documentsButton}>
-                  <a href="/РЕГЛАМЕНТ УЧАСТИЯ 2023.pdf" download={"РЕГЛАМЕНТ УЧАСТИЯ 2023.pdf"}>
+                  <a href="/РЕГЛАМЕНТ УЧАСТИЯ 2023.pdf" download={"РЕГЛАМЕНТ УЧАСТИЯ 2025.pdf"}>
                     <img alt="pdf" src={pdfLogo} width={80} height={100} />
                     Регламент <br /> участия и пребывания
                   </a>
                 </div>
                 <div className={styles.documentsButton}>
-                  <a href="/ВСЕ.pdf" download={"Расписание.pdf"}>
+                  <a href="/ВСЕ.pdf" download={"РАСПИСАНИЕ 2025.pdf"}>
                     <img alt="pdf" src={pdfLogo} width={80} height={100} />
                     ОБЩЕЕ РАСПИСАНИЕ
                   </a>
@@ -1092,7 +1092,7 @@ const Home = () => {
 
             <div
               className={styles.participantsTable}
-              style={{ maxHeight: fullPart ? "100%" : "1000px" }}
+              style={{ maxHeight: fullPart ? "100%" : "0px" }}
             >
               {participants.map((item) => (
                 <ControlledRefModalPart item={item} />
@@ -1114,7 +1114,7 @@ const Home = () => {
                 setFullPart(!fullPart);
               }}
             >
-              <button>{fullPart ? "СКРЫТЬ" : "ПОКАЗАТЬ ВСЕХ"}</button>
+              <button>{fullPart ? "СКРЫТЬ" : "ПОКАЗАТЬ УЧАСТНИКОВ"}</button>
             </div>
           </div>
         </div>
@@ -1124,7 +1124,7 @@ const Home = () => {
         <div className={styles.wrapper}>
           <div className={styles.about} id="jury">
           <div className={styles.Title}>ЖЮРИ</div>
-          <div className={styles.left} style={{textAlign:'left'}}>Cписок жюри будет обновлен позже</div>
+          <div style={{textAlign:'left'}}>Cписок жюри будет обновлен позже</div>
             <div className={styles.juryList}>
 
               
@@ -1287,112 +1287,6 @@ const Home = () => {
                   img={V6}
                   place="Католический собор <br/> Пресвятой Богородицы"
                 />
-              </div>
-            </div>
-          </div>
-        </FadeInSection>
-        <FadeInSection>
-          <div className={styles.bgWrapper}>
-            <div className={styles.photos} id="gallery">
-              <div className={styles.galleryTitle}>
-                <div className={styles.paragraphTitle}>Галерея</div>
-                <div className={styles.galleryButtons}>
-                  <button className={styles.prev}>
-                    <img alt="pdf" id="prev" src={prevIcon} width={36} height={36} onClick={prevSlide} />
-                  </button>
-                  <button className={styles.next}>
-                    <img alt="pdf" id='next' src={nextIcon} width={36} height={36} onClick={nextSlide} />
-                  </button>
-                </div>
-              </div>
-
-              <div className={styles.photosAlbums}>
-                <div
-                  className={styles.photoMain}
-                  onClick={() => redirect("/gallery-album/Церемония открытия Олимпиады")}
-                >
-                  <img src={A1} className={styles.backPhoto} />
-                  <div className={styles.photoMainTitle}>
-                    Церемония открытия Олимпиады
-                  </div>
-                </div>
-
-                <div
-                  className={styles.photoMain}
-                  onClick={() => redirect("/gallery-album/Конкурсные прослушивания 26.10")}
-                >
-                  <img src={A2} className={styles.backPhoto} />
-                  <div className={styles.photoMainTitle}>
-                    Конкурсные прослушивания 26.10
-                  </div>
-                </div>
-
-                <div
-                  className={styles.photoMain}
-                  onClick={() => redirect("/gallery-album/Концерт народных хоров в Филармонии 26.10")}
-                >
-                  <img src={A3} className={styles.backPhoto} />
-                  <div className={styles.photoMainTitle}>
-                    Концерт народных хоров в Филармонии 26.10
-                  </div>
-                </div>
-
-                <div
-                  className={styles.photoMain}
-                  onClick={() => redirect("/gallery-album/Концерт академических хоров в Мариинском театре 26.10")}
-                >
-                  <img src={A4} className={styles.backPhoto} />
-                  <div className={styles.photoMainTitle}>
-                    Концерт академических хоров в Мариинском театре 26.10
-                  </div>
-                </div>
-
-                <div
-                  className={styles.photoMain}
-                  onClick={() => redirect("/gallery-album/Конкурсные прослушивания 27.10")}
-                >
-                  <img src={A5} className={styles.backPhoto} />
-                  <div className={styles.photoMainTitle}>
-                    Конкурсные прослушивания 27.10
-                  </div>
-                </div>
-
-                <div
-                  className={styles.photoMain}
-                  onClick={() => redirect("/gallery-album/Дружеский концерт 27.10")}
-                >
-                  <img src={A6} className={styles.backPhoto} />
-                  <div className={styles.photoMainTitle}>
-                    Дружеский концерт 27.10
-                  </div>
-                </div>
-
-                <div
-                  className={styles.photoMain}
-                  onClick={() => redirect("/gallery-album/Концерт духовной музыки 28.10")}
-                >
-                  <img src={A7} className={styles.backPhoto} />
-                  <div className={styles.photoMainTitle}>
-                    Концерт духовной музыки 28.10
-                  </div>
-                </div>
-
-                <div
-                  className={styles.photoMain}
-                  onClick={() => redirect("/gallery-album/Церемония закрытия")}
-                >
-                  <img src={A8} className={styles.backPhoto} />
-                  <div className={styles.photoMainTitle}>
-                    Церемония закрытия
-                  </div>
-                </div>
-              </div>
-
-
-              <div className={styles.center}>
-                <a className={styles.primaryButton} href="/gallery">
-                  перейти в галерею
-                </a>
               </div>
             </div>
           </div>

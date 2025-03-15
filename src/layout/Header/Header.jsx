@@ -50,6 +50,10 @@ const variants = {
 
 const menu = [
   {
+    name: "Программа",
+    link: "#programm",
+  },
+  {
     name: "Документы",
     link: "#documents",
   },
@@ -60,10 +64,6 @@ const menu = [
   {
     name: "Жюри",
     link: "#jury",
-  },
-  {
-    name: "Галерея",
-    link: "#gallery",
   },
   {
     name: "Результаты",
@@ -116,10 +116,10 @@ export const Header = () => {
   const [activeHash, setActiveHash] = useState('intro');
 
   const hashMap = {
+    'programm': "Программа",
     'documents': "Документы",
     'participants': 'Участники',
     'jury': 'Жюри',
-    'gallery': 'Галерея',
     'results': 'Результаты'
   }
 
@@ -137,14 +137,15 @@ export const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
+      const intro = document.getElementById('intro');
+      const programm = document.getElementById('programm');
       const documents = document.getElementById('documents');
       const participants = document.getElementById('participants');
       const jury = document.getElementById('jury');
-      const galery = document.getElementById('gallery');
       const results = document.getElementById('results');
 
       const sections = [
-        documents, participants, jury, galery, results
+        intro,programm,documents, participants, jury, results
       ];
       const currentScrollY = window.scrollY;
 
@@ -195,6 +196,9 @@ export const Header = () => {
 
           <menu className={styles.menuWrapper}>
             <ul className={styles.menu}>
+              {/*<li className={styles.FormButton}>
+                <a>Заявка</a>
+              </li>*/}
               {menu.map((menuItem) => (
                 <li key={menuItem.link} className={styles.menuItem}>
                   <Link onClick={() => handleAnchorClick(menuItem.link)} to={menuItem.link} className={classNames({
@@ -203,7 +207,9 @@ export const Header = () => {
                 </li>
               ))}
             </ul>
-            <motion.nav
+            
+          </menu>
+          <motion.nav
               initial={false}
               animate={isOpen ? "open" : "closed"}
               custom={height}
@@ -215,7 +221,6 @@ export const Header = () => {
               <Navigation toggleOpen={toggleOpen} open={isOpen} active={activeHash} />
               <MenuToggle toggle={() => toggleOpen()} />
             </motion.nav>
-          </menu>
           {/*<div className={styles.LangButton}>
             <Icons type='ruflag'></Icons>
           </div>*/}
