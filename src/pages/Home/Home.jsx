@@ -1062,19 +1062,19 @@ const Home = () => {
             <div className={styles.documentsContent}>
               <div className={styles.documentsButtons}>
                 <div className={styles.documentsButton}>
-                  <a href="/ПОЛОЖЕНИЕ 2025.pdf" download={"ПОЛОЖЕНИЕ 2025.pdf"}>
+                  <a href={process.env.PUBLIC_URL + 'ПОЛОЖЕНИЕ 2025.pdf'} download={"ПОЛОЖЕНИЕ 2025.pdf"}>
                     <img alt="pdf" src={pdfLogo} width={80} height={100} />
                     ПОЛОЖЕНИЕ ОБ <br /> ОЛИМПИАДЕ
                   </a>
                 </div>
                 <div className={styles.documentsButton}>
-                  <a href="/РЕГЛАМЕНТ 2025.pdf" download={"РЕГЛАМЕНТ 2025.pdf"}>
+                  <a href={process.env.PUBLIC_URL + 'РЕГЛАМЕНТ 2025.pdf'} download={"РЕГЛАМЕНТ 2025.pdf"}>
                     <img alt="pdf" src={pdfLogo} width={80} height={100} />
                     Регламент <br /> участия и пребывания
                   </a>
                 </div>
                 <div className={styles.documentsButton}>
-                  <a href="/ОБЩЕЕ РАСПИСАНИЕ 2025.pdf" download={"ОБЩЕЕ РАСПИСАНИЕ 2025.pdf"}>
+                  <a href={process.env.PUBLIC_URL + 'ОБЩЕЕ РАСПИСАНИЕ 2025.pdf'} download={"ОБЩЕЕ РАСПИСАНИЕ 2025.pdf"}>
                     <img alt="pdf" src={pdfLogo} width={80} height={100} />
                     ОБЩЕЕ РАСПИСАНИЕ
                   </a>
