@@ -1,0 +1,138 @@
+.Form{
+    margin: auto;
+    width: 800px;
+    @media (max-width: 900px) {
+        width: 80%;;
+    }
+    & > *{
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+}
+
+.inputContainer{
+    display: block;
+    position: relative;
+    font-family: Commissioner, sans-serif;
+}
+
+.inputContainer h4{
+    font-weight: 300;
+    padding: 5px 0 20px 0;
+    opacity: 60%;
+    font-size: 20px;
+    @media (max-width: 900px) {
+        font-size: 16   px;
+    }
+}
+
+.inputContainer h3{
+    font-weight:400;
+    opacity: 100% !important;
+    color: black;
+    text-align: left;
+    display: block;
+    width: 100%;
+    font-size: 26px;
+    @media (max-width: 900px) {
+        font-size: 22px;
+    }
+}
+
+.inputContainer span{
+    height: 20px;
+    font-size: 20px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+    opacity: 50%;
+    position: absolute;
+    transition: all 0.2s ease-in-out;
+    bottom: 10px;
+    font-size: 20px;
+}
+
+.inputContainer:focus-within span,
+.inputContainer input:not(:placeholder-shown) + span {
+  bottom: 40px;
+  opacity: 20%;
+  font-size: 18px;
+}
+
+
+.inputContainer input{
+    display: block;
+    box-sizing: border-box;
+    padding: 30px 0 10px 0 !important;
+    background-color: transparent !important;
+    border-bottom: 1px solid #1a5c7c;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    font-size: 20px;
+    @media (max-width: 900px) {
+        font-size: 18px;
+    }
+}
+
+.inputContainer input[type="number"]{
+    width: 250px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="date"]::-webkit-datetime-edit,
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-clear-button {
+  color: gray;
+}
+
+.inputContainer label{
+    display: initial;
+    padding: 0 10px 0 10px;
+    font-size: 20px;
+    @media (max-width: 900px) {
+        font-size: 18px;
+    }
+}
+
+.inputContainer input[type='radio']{
+    display: initial;
+    transform: scale(1.4); /* Increase the size by 1.5x */
+}
+
+.buttonWrapper{
+    display: block;
+    text-align: center;
+    padding: 0 15px 0 15px;
+}
+
+.SubmitButton{
+    margin-bottom: 15px;
+    padding: 0 75px 0 75px;
+    color: #ffffff;
+    background-color: #1a5c7c;
+    border-radius: 10px;
+    font-family: Commissioner, sans-serif;
+    font-weight: 400;
+    height: 60px;
+    font-size: 20px;
+    transition: background-color 0.2s ease-in-out;
+        @media (max-width: 900px) {
+            font-size: 18px;
+        }
+    border: none;
+    &:hover {
+        cursor: pointer;
+        background-color: #92C4CA;
+      }
+}
