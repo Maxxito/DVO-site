@@ -56,10 +56,10 @@ export const Footer = () => {
                 <div className={styles.icons}>
                     <Logo className={styles.choir} />
                     <Icons type='rf' className={styles.rf} width={204} height={71}/>
-                    <Icons type='sponsor1' className={styles.rf} width={204} height={71}/>
                     <Icons type='sponsor2' className={styles.rf} width={204} height={71}/>
                     <Icons type='sponsor3' className={styles.rf} width={204} height={71}/>
                     <Icons type='sponsor4' className={styles.rf} width={204} height={71}/>
+                    <Icons type='sponsor1' className={styles.rf} width={204} height={71}/>
                 </div>
                 <div className={styles.copyright}>
                 © Дальневосточная хоровая олимпиада, 2025
