@@ -149,8 +149,8 @@ const Icons = ({ type, ...props }) => {
                 )
         case 'sponsor3':
             return (
-                <svg width="250" height="94" viewBox="0 0 250 94" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
-<rect width="250" height="94" fill="url(#pattern3)"/>
+                <svg width="180" height="70" viewBox="0 0 180 70" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+<rect width="180" height="70" fill="url(#pattern3)"/>
 <defs>
 <pattern id="pattern3" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlinkHref="#image2" transform="matrix(0.00061 0 0 0.0014 0 -1.1)"/>
