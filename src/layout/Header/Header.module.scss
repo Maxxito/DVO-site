@@ -20,7 +20,7 @@
   height: 100px;
   background-color: #ffffff;
   padding: 20px;
-  grid-template-columns: auto 1fr auto auto;
+  grid-template-columns: auto 1fr auto;
   z-index: 100;
 }
 
@@ -46,35 +46,28 @@
 
 .menuWrapper {
   display: flex;
-  align-items: center;
-  justify-content: center;
   ul {
     max-width: 100%;
   }
 }
 
 .FormButton {
+  margin-right: 35px;
   border-radius: 10px;
   background-color:#134D6F;
   padding: 6px;
-  min-width: 90px;
   height: 40px;
   transition: all 0.3s ease;
-
-  a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-    transition: all 0.3s ease;
-
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    color: white;
-  }
+  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: white;
   
   &:hover {
     cursor: pointer;
@@ -135,7 +128,7 @@
   -ms-user-select: none;
   cursor: pointer;
   position: absolute;
-  top: 35px;
+  top: 25px;
   right: 25px;
   width: 55px;
   height: 55px;
@@ -204,6 +197,11 @@
   .header {
     width: 100%;
   }
+
+  .menuWrapper {
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 @media (max-width: 1490px) {
@@ -213,8 +211,17 @@
 }
 
 @media (max-width: 1300px) {
-  .menuWrapper {
+  .menu {
     display: none;
+  }
+  .FormButton{
+      width: 90px;
+      margin-left: auto;
+      margin-right: 70px;
+  }
+  .menuWrapper {
+    align-items: normal;
+    justify-content: normal;
   }
 
   .toggle {
@@ -222,7 +229,7 @@
   }
 
   .header {
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto;
   }
 
   .networks {

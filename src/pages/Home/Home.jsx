@@ -926,8 +926,13 @@ const Home = () => {
               </div>
             </div>
 
-            <div className={styles.video}>
-              <ReactPlayer url='https://www.youtube.com/watch?v=Bjo2Mwu63f0' width={'100%'} height={"0px"} />
+            <div className={styles.playerWrapper}>
+              <ReactPlayer
+                className={styles.player}
+                url='https://www.youtube.com/watch?v=Bjo2Mwu63f0'
+                width='100%'
+                height='100%'
+              />
             </div>
           </div>
         </div>
@@ -963,7 +968,7 @@ const Home = () => {
                           <td>А1</td>
                           <td>Младшие детские хоры</td>
                           <td><i>7–17 лет</i></td>
-                          <td rowSpan={3}><i>от 16</i></td>
+                          <td rowSpan={3} width={"60px"}><i>от 16</i></td>
                         </tr>
                         <tr>
                           <td>А2</td>

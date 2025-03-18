@@ -193,12 +193,9 @@ export const Header = () => {
           <div className={styles.activeHash} style={{ display: width < 1300 && activeHash !== 'intro' ? 'block' : 'none' }}>
             {hashMap[activeHash]}
           </div>
-
           <menu className={styles.menuWrapper}>
+            <a className={styles.FormButton} href="https://choirolympicapplications.tilda.ws/dvo">Заявка</a>
             <ul className={styles.menu}>
-              {/*<li className={styles.FormButton}>
-                <a href="/form">Заявка</a>
-              </li>*/}
               {menu.map((menuItem) => (
                 <li key={menuItem.link} className={styles.menuItem}>
                   <Link onClick={() => handleAnchorClick(menuItem.link)} to={menuItem.link} className={classNames({
@@ -209,7 +206,15 @@ export const Header = () => {
             </ul>
             
           </menu>
-          <motion.nav
+          {/*<div className={styles.LangButton}>
+            <Icons type='ruflag'></Icons>
+          </div>*/}
+          <div className={styles.networks}>
+            <Icons type='vk' className={styles.vk} width={24} height={24} onClick={() => openVk()} />
+            <Icons type='youtube' className={styles.youtube} width={24} height={24} onClick={() => openYoutube()} />
+          </div>
+        </header>
+        <motion.nav
               initial={false}
               animate={isOpen ? "open" : "closed"}
               custom={height}
@@ -221,14 +226,6 @@ export const Header = () => {
               <Navigation toggleOpen={toggleOpen} open={isOpen} active={activeHash} />
               <MenuToggle toggle={() => toggleOpen()} />
             </motion.nav>
-          {/*<div className={styles.LangButton}>
-            <Icons type='ruflag'></Icons>
-          </div>*/}
-          <div className={styles.networks}>
-            <Icons type='vk' className={styles.vk} width={24} height={24} onClick={() => openVk()} />
-            <Icons type='youtube' className={styles.youtube} width={24} height={24} onClick={() => openYoutube()} />
-          </div>
-        </header>
       </div>
     </div>
   );
