@@ -29,6 +29,9 @@
   line-height: 81px;
 
   color: #FFFFFF;
+  @media (max-width: 900px) {
+    font-size: 52px;
+  }
 }
 
 .contactTitle {
@@ -73,6 +76,7 @@
 
 .vk {
   cursor: pointer;
+  margin-left: 20px;
   margin-right: 20px;
   fill: #ffffff;
 }

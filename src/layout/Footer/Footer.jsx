@@ -10,6 +10,10 @@ export const Footer = () => {
         window.open("https://vk.com/fareastchoirolympic", "_blank");
     };
 
+    const openTg = () => {
+        window.open("https://web.telegram.org/k/#@fefuchoir", "_blank");
+    };
+
     const openYoutube = () => {
         window.open("https://www.youtube.com/channel/UCEPYTlA03JIdsYQmwMdAhbQ/featured", "_blank");
     };

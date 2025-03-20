@@ -193,7 +193,7 @@ const Form=() => {
         </div>
         <div className={styles.inputContainer}>
           <input type="date" name="depart" value={depart} onChange={handleChange} placeholder=" "/>
-          <span>дата отпарвления</span>
+          <span>дата отправления</span>
         </div>
         <div className={styles.inputContainer}>
           <h3>Фестивальный пакет</h3>
@@ -210,7 +210,7 @@ const Form=() => {
         </div>
         <div className={styles.inputContainer}>
           <h3>Контактные данные</h3>
-          <input type="tel" name="supervisor_phone" value={supervisor_phone} onChange={handleChange} placeholder="+7"/>
+          <input type="tel" name="supervisor_phone" value={supervisor_phone} onChange={handleChange}/>
           <span>+7926583230</span>
         </div>
         <div className={styles.buttonWrapper}>

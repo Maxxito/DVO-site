@@ -55,10 +55,9 @@
   margin-right: 35px;
   border-radius: 10px;
   background-color:#134D6F;
-  padding: 6px;
+  padding: 6px 20px;
   height: 40px;
   transition: all 0.3s ease;
-  width: 120px;
   display: flex;
   align-items: center;
   justify-content: center;  
@@ -215,7 +214,6 @@
     display: none;
   }
   .FormButton{
-      width: 90px;
       margin-left: auto;
       margin-right: 70px;
   }

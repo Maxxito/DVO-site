@@ -58,16 +58,12 @@ const menu = [
     link: "#documents",
   },
   {
-    name: "Участники",
-    link: "#participants",
-  },
-  {
-    name: "Жюри",
-    link: "#jury",
-  },
-  {
     name: "Результаты",
     link: "#results",
+  },
+  {
+    name: "Регистрация",
+    link: "#registration",
   },
 ];
 
@@ -118,9 +114,8 @@ export const Header = () => {
   const hashMap = {
     'programm': "Программа",
     'documents': "Документы",
-    'participants': 'Участники',
-    'jury': 'Жюри',
-    'results': 'Результаты'
+    'results': 'Результаты',
+    'registration': 'Регистрация'
   }
 
   function isInViewport(el) {
@@ -194,7 +189,7 @@ export const Header = () => {
             {hashMap[activeHash]}
           </div>
           <menu className={styles.menuWrapper}>
-            <a className={styles.FormButton} href="https://choirolympicapplications.tilda.ws/dvo">Заявка</a>
+            <a className={styles.FormButton} href="https://choirolympicapplications.tilda.ws/dvo">Подать Заявку</a>
             <ul className={styles.menu}>
               {menu.map((menuItem) => (
                 <li key={menuItem.link} className={styles.menuItem}>

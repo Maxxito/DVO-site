@@ -918,12 +918,14 @@ const Home = () => {
             </div>
 
             <div className={styles.aboutDescription}>
-              <div>
-              С 27 октября по 1 ноября 2025 года во Владивостоке пройдет III Дальневосточная хоровая олимпиада. Третья хоровая олимпиада - это международный конкурс, который включает в себя конкурсные прослушивания в 12 номинациях, фестивальные концерты, мастер-классы от членов жюри мирового уровня, торжественные церемонии открытия и закрытия, а также незабываемый заряд вдохновения."
-              </div>
-              <div>
-              Вторая Дальневосточная хоровая Олимпиада стала самым крупным хоровым конкурсом в России, включившим в себя 110 хоров с общим количеством конкурсантов более 2500 человек. Вместе с вами мы можем сделать Олимпиаду доброй традицией и внести небольшой, но значимый вклад в поддержку и развитие хорового искусства!
-              </div>
+              С 27 октября по 1 ноября 2025 года во Владивостоке пройдет III Дальневосточная хоровая олимпиада. Третья хоровая олимпиада -
+              это международный конкурс, который включает в себя конкурсные прослушивания в 12 номинациях, фестивальные концерты,
+              мастер-классы от членов жюри мирового уровня,
+              торжественные церемонии открытия и закрытия, а также незабываемый заряд вдохновения.<br></br><br></br> 
+              Вторая Дальневосточная хоровая Олимпиада стала самым крупным хоровым конкурсом в России,
+              включившим в себя 110 хоров с общим количеством конкурсантов более 2500 человек.
+              Вместе с вами мы можем сделать Олимпиаду доброй традицией и внести небольшой,
+              но значимый вклад в поддержку и развитие хорового искусства!
             </div>
 
             <div className={styles.playerWrapper}>
@@ -1092,6 +1094,14 @@ const Home = () => {
       </FadeInSection>
       <FadeInSection>
         <div className={styles.wrapper}>
+          <div className={styles.registration} id="registration">
+            <div className={styles.Title}>Регистрация</div>
+            <a className={styles.FormButton} href="https://choirolympicapplications.tilda.ws/dvo">ПОДАТЬ ЗАЯВКУ</a>
+          </div>
+        </div>
+      </FadeInSection>
+      <FadeInSection>
+        <div className={styles.wrapper}>
           <div className={styles.participants} id="participants">
             <div className={styles.Title}>участники 2023</div>
 
@@ -1129,7 +1139,7 @@ const Home = () => {
         <div className={styles.wrapper}>
           <div className={styles.about} id="jury">
           <div className={styles.Title}>ЖЮРИ</div>
-          <div style={{textAlign:'left'}}>Cписок жюри будет обновлен позже</div>
+          <div className={styles.aboutDescription} style={{ textAlign: 'center' }}>Cписок жюри будет обновлен позже</div>
             <div className={styles.juryList}>
 
               
@@ -1292,6 +1302,10 @@ const Home = () => {
                   img={V6}
                   place="Католический собор <br/> Пресвятой Богородицы"
                 />
+                <VenueCard
+                  img={V7}
+                  place="Центральная Музыкальная Школа"
+                />
               </div>
             </div>
           </div>
@@ -1301,14 +1315,12 @@ const Home = () => {
             <div className={styles.resultsTitle}><span className={styles.blue}>СКАЧАТЬ</span> РЕЗУЛЬТАТЫ</div>
 
             <div className={styles.results}>
-              <div className={styles.downloadResult}>
                 <a href="/Результаты2.pdf" download={"Результаты-2023.pdf"}>
                   2023
                 </a>
                 <a href="/Результаты1.pdf" download={"Результаты-2022.pdf"}>
                   2022
                 </a>
-              </div>
             </div>
           </div>
         </FadeInSection>
