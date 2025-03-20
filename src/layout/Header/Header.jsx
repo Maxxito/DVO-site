@@ -189,7 +189,7 @@ export const Header = () => {
             {hashMap[activeHash]}
           </div>
           <menu className={styles.menuWrapper}>
-            <a className={styles.FormButton} href="https://choirolympicapplications.tilda.ws/dvo">Подать Заявку</a>
+            <a className={styles.FormButton} href="https://choirolympicapplications.tilda.ws/dvo">Заявка</a>
             <ul className={styles.menu}>
               {menu.map((menuItem) => (
                 <li key={menuItem.link} className={styles.menuItem}>
