@@ -1137,8 +1137,8 @@ const Home = () => {
       </FadeInSection>
       <FadeInSection>
         <div className={styles.wrapper}>
-          <div className={styles.about} id="jury">
-          <div className={styles.Title}>ЖЮРИ</div>
+          <div className={styles.about}>
+          <div className={styles.Title} id="jury">ЖЮРИ</div>
           <div className={styles.aboutDescription} style={{ textAlign: 'center' }}>Cписок жюри будет обновлен позже</div>
             <div className={styles.juryList}>
 

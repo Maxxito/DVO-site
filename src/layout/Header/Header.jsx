@@ -58,13 +58,13 @@ const menu = [
     link: "#documents",
   },
   {
-    name: "Результаты",
-    link: "#results",
-  },
-  {
     name: "Регистрация",
     link: "#registration",
   },
+  {
+    name: "Результаты",
+    link: "#results",
+  }
 ];
 
 const Navigation = ({ toggleOpen, open }) => (
@@ -114,8 +114,10 @@ export const Header = () => {
   const hashMap = {
     'programm': "Программа",
     'documents': "Документы",
+    'registration': 'Регистрация',
+    'participants': 'Участники',
+    'jury': 'Жюри',
     'results': 'Результаты',
-    'registration': 'Регистрация'
   }
 
   function isInViewport(el) {
@@ -138,9 +140,10 @@ export const Header = () => {
       const participants = document.getElementById('participants');
       const jury = document.getElementById('jury');
       const results = document.getElementById('results');
+      const registration = document.getElementById('registration');
 
       const sections = [
-        intro,programm,documents, participants, jury, results
+        intro,programm,documents, participants, jury, results,registration
       ];
       const currentScrollY = window.scrollY;
 
