@@ -1069,13 +1069,13 @@ const Home = () => {
             <div className={styles.documentsContent}>
               <div className={styles.documentsButtons}>
                 <div className={styles.documentsButton}>
-                  <a href="/ПОЛОЖЕНИЕ 2025.pdf" download={"ПОЛОЖЕНИЕ 2025.pdf"}>
+                  <a href="/ПОЛОЖЕНИЕ III, 2025.pdf" download={"ПОЛОЖЕНИЕ III, 2025.pdf"}>
                     <img alt="pdf" src={pdfLogo} width={80} height={100} />
                     ПОЛОЖЕНИЕ ОБ <br /> ОЛИМПИАДЕ
                   </a>
                 </div>
                 <div className={styles.documentsButton}>
-                  <a href="/РЕГЛАМЕНТ 2025.pdf" download={"РЕГЛАМЕНТ УЧАСТИЯ 2025.pdf"}>
+                  <a href="/РЕГЛАМЕНТ III, 2025.pdf" download={"РЕГЛАМЕНТ III, 2025.pdf"}>
                     <img alt="pdf" src={pdfLogo} width={80} height={100} />
                     Регламент <br /> участия и пребывания
                   </a>
