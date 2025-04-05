@@ -1,0 +1,91 @@
+{
+    "intro": {
+    "part1": "III Far Eastern",
+    "part2": "Choral Olympiad",
+    "part3": "October 27 – November 1, 2025",
+    "part4": "Vladivostok"
+    },
+    "about": {
+        "title": {
+        "part1": "Far Eastern",
+        "part2": "Choral Olympiad"
+        },
+        "part1": "From October 27 to November 1, 2025, the III Far Eastern Choral Olympiad will be held in Vladivostok. The Third Choir Olympiad is an international competition that includes competitive auditions in 12 nominations, festival concerts, master classes from world-class jury members, opening and closing ceremonies, as well as an unforgettable charge of inspiration.",
+        "part2": "The Second Far Eastern Choral Olympiad became the largest choral competition in Russia. It gathered 110 choirs with a total number of participants of over 2,500. Together, we can make the Olympiad a good tradition and make a small but significant contribution to the support and development of choral art!"
+    },
+    "programm": {
+      "title": "PROGRAM",
+      "intitle": {
+        "part1": "Contest",
+        "part2": "Festival",
+        "part3": "Masterclasses"
+      },
+      "text": {
+        "part1": "The Far Eastern Choral Olympiad will include opening and closing ceremonies, and festival concerts at the best venues in Vladivostok.",
+        "part2": "All the participants will have the opportunity to take part in master classes from jury members, choral conductors, and world-class composers."
+      }
+    },
+    "documents": {
+      "title": "Documents",
+      "intitle": {
+        "part1": "REGULATIONS",
+        "part2": "PARTICIPANT CONDITIONS",
+        "part3": "SCHEDULE"
+      },
+      "links": {
+        "part1": "/CONDITIONS III FECO 2025.pdf",
+        "part2": "/REGULATIONS III FECO 2025.pdf",
+        "part3": "/SCHEDULE III FECO 2025.pdf"
+      }
+    },
+    "registration": {
+      "title": "Registration",
+      "form": "Apply"
+    },
+    "jury": {
+      "title": "Jury",
+      "text": "The list of the Jury will be updated"
+    },
+    "venues": {
+      "title": {
+        "part1": "Venues",
+        "part2": "",
+        "part3": ""
+      },
+      "intitle": {
+        "part1": "Blue Concert Hall of the FEFU",
+        "part2": "Sredny Conference Hall of the FEFU",
+        "part3": "Primorsky Regional Philharmonic",
+        "part4": "Evangelical Lutheran Church of St. Paul",
+        "part5": "Catholic Church of the Most Holy Theotokos",
+        "part6": "Central Musical School"
+      }
+    },
+    "footer": {
+      "title": "contacts",
+      "intitle": {
+        "part1": "Artistic Director",
+        "part2": "E-mail",
+        "part3": "Social media"
+      },
+      "text": {
+        "part1": "Elena Petukhova",
+        "part2": "fareastchoir@gmail.com",
+        "part3": "Tel: +7 924 236 67 03"
+      }
+    },
+    "header": {
+      "button1": "Apply ",
+      "button1url": "https://choirolympicapplications.tilda.ws/eng",
+      "buttunflag": "engflag"
+    },
+    "menu": {
+      "program": "Program",
+      "documents": "Documents",
+      "registration": "Registration",
+      "results": "Results"
+    },
+    "participants": {
+      "title": "Participants 2025"
+    }
+  }
