@@ -156,29 +156,9 @@ import P9 from '../../assets/images/part/96.jpg';
 import P8 from '../../assets/images/part/97.jpg';
 import P7 from '../../assets/images/part/98.jpg';
 import P6 from '../../assets/images/part/99.jpg';
-import i18n from "i18next";
-import { useTranslation, initReactI18next } from "react-i18next";
+import i18n from '../../utils/trans.js'
+import { useTranslation } from "react-i18next";
 
-
-
-i18n.use(initReactI18next).init({
-  resources: {
-    en: {
-      translation: {
-        descriptionleft: "Left",
-        descriptionright: "Right"
-      }
-    },
-    ru: {
-      translation: {
-        descriptionright: "Вторая Дальневосточная хоровая Олимпиада стала самым крупным хоровым конкурсом в России, включившим в себя 110 хоров с общим количеством конкурсантов более 2500 человек. Вместе с вами мы можем сделать Олимпиаду доброй традицией и внести небольшой, но значимый вклад в поддержку и развитие хорового искусства!",
-        descriptionleft: "С 27 октября по 1 ноября 2025 года во Владивостоке пройдет III Дальневосточная хоровая олимпиада. Третья хоровая олимпиада - это международный конкурс, который включает в себя конкурсные прослушивания в 12 номинациях, фестивальные концерты, мастер-классы от членов жюри мирового уровня, торжественные церемонии открытия и закрытия, а также незабываемый заряд вдохновения.",
-      }
-    }
-  },
-  lng: "ru", 
-  fallbackLng: "ru"
-});
 
 function FadeInSection(props) {
   const [isVisible, setVisible] = React.useState(false);
@@ -208,11 +188,8 @@ function FadeInSection(props) {
   );
 }
 
-// TODO: connect i18n
 const Home = () => {
-
-  const { t } = useTranslation();
-
+  const {t} = useTranslation()
   const width = useWindowSize().width;
   const [settingsNews, setSettingsNews] = useState({
     infinite: true,
@@ -860,8 +837,9 @@ const Home = () => {
       style={{ position: 'relative' }}
       ref={contentRef}
       onScroll={handleScroll}
+      id={"intro"}
     >
-      <div className={styles.introSection} id={"intro"}>
+      <div className={styles.introSection}>
         <div className={styles.intro}>
           <Slider {...settingsIntro}>
             <div className={styles.slideImage}>
@@ -897,10 +875,10 @@ const Home = () => {
           </Slider>
           <div className={styles.introText}>
             <span className={styles.olympTitle}>
-              III Дальневосточная <br /> хоровая олимпиада
+              {t('intro.part1')}<br />{t('intro.part2')}
             </span>
             <span className={styles.olympDate}>
-            27 октября – 1 ноября 2025 <br /> Владивосток
+              {t('intro.part3')}<br />{t('intro.part4')} 
             </span>
           </div>
         </div>
@@ -910,22 +888,15 @@ const Home = () => {
           <div className={styles.about}>
             <div className={styles.title}>
               <span className={styles.aboutTitle}>
-                хоровая олимпиада
+                {t('about.title.part1')}
               </span>
               <span className={styles.aboutTitleBottom}>
-                на Дальнем Востоке
+                {t('about.title.part2')}
               </span>
             </div>
 
             <div className={styles.aboutDescription}>
-              С 27 октября по 1 ноября 2025 года во Владивостоке пройдет III Дальневосточная хоровая олимпиада. Третья хоровая олимпиада -
-              это международный конкурс, который включает в себя конкурсные прослушивания в 12 номинациях, фестивальные концерты,
-              мастер-классы от членов жюри мирового уровня,
-              торжественные церемонии открытия и закрытия, а также незабываемый заряд вдохновения.<br></br><br></br> 
-              Вторая Дальневосточная хоровая Олимпиада стала самым крупным хоровым конкурсом в России,
-              включившим в себя 110 хоров с общим количеством конкурсантов более 2500 человек.
-              Вместе с вами мы можем сделать Олимпиаду доброй традицией и внести небольшой,
-              но значимый вклад в поддержку и развитие хорового искусства!
+              {t('about.part1')}<br></br>{t('about.part2')}
             </div>
 
             <div className={styles.playerWrapper}>
@@ -942,12 +913,12 @@ const Home = () => {
       <FadeInSection>
         <div className={styles.wrapper}>
           <div className={styles.rules} id={"rules"}>
-            <span className={styles.Title} id={"programm"}>ПРОГРАММА</span>
+            <span className={styles.Title} id={"programm"}>{t('programm.title')}</span>
             <div className={styles.rulesContent}>
               <Accordion allowZeroExpanded>
                 <AccordionItem>
                   <AccordionItemHeading>
-                    <AccordionItemButton>КОНКУРС</AccordionItemButton>
+                    <AccordionItemButton>{t('programm.intitle.part1')}</AccordionItemButton>
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <table border="black">
@@ -1036,23 +1007,21 @@ const Home = () => {
                 </AccordionItem>
                 <AccordionItem>
                   <AccordionItemHeading>
-                    <AccordionItemButton>ФЕСТИВАЛЬ</AccordionItemButton>
+                    <AccordionItemButton>{t('programm.intitle.part2')}</AccordionItemButton>
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <p>
-                      В рамках Дальневосточной хоровой олимпиады пройдут торжественные церемонии открытия и закрытия, а также фестивальные концерты участников на лучших площадках Владивостока.
+                    {t('programm.text.part1')}
                     </p>
                   </AccordionItemPanel>
                 </AccordionItem>
                 <AccordionItem>
                   <AccordionItemHeading>
-                    <AccordionItemButton>МАСТЕР-КЛАССЫ</AccordionItemButton>
+                    <AccordionItemButton>{t('programm.intitle.part3')}</AccordionItemButton>
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <p>
-                    Все участники хоровой олимпиады получат возможность принять участие  
-в мастер-классах от членов жюри, хоровых дирижеров и композиторов  
-мирового уровня.
+                    {t('programm.text.part2')}
                     </p>
                   </AccordionItemPanel>
                 </AccordionItem>
@@ -1065,25 +1034,25 @@ const Home = () => {
       <FadeInSection>
         <div className={styles.wrapper}>
           <div className={styles.rules} id={"documents"}>
-            <span className={styles.Title}>документы</span>
+            <span className={styles.Title}>{t('documents.title')}</span>
             <div className={styles.documentsContent}>
               <div className={styles.documentsButtons}>
                 <div className={styles.documentsButton}>
-                  <a href="/ПОЛОЖЕНИЕ III, 2025.pdf" download={"ПОЛОЖЕНИЕ III, 2025.pdf"}>
+                  <a href={t('documents.links.part1')} download={t('documents.intitle.part1')}>
                     <img alt="pdf" src={pdfLogo} width={80} height={100} />
-                    ПОЛОЖЕНИЕ ОБ <br /> ОЛИМПИАДЕ
+                    {t('documents.intitle.part1')}
                   </a>
                 </div>
                 <div className={styles.documentsButton}>
-                  <a href="/РЕГЛАМЕНТ III, 2025.pdf" download={"РЕГЛАМЕНТ III, 2025.pdf"}>
+                  <a href={t('documents.links.part2')} download={t('documents.intitle.part2')}>
                     <img alt="pdf" src={pdfLogo} width={80} height={100} />
-                    Регламент <br /> участия и пребывания
+                    {t('documents.intitle.part2')}
                   </a>
                 </div>
                 <div className={styles.documentsButton}>
-                  <a href="/ОБЩЕЕ РАСПИСАНИЕ 2025.pdf" download={"РАСПИСАНИЕ 2025.pdf"}>
+                  <a href={t('documents.links.part3')} download={t('documents.intitle.part3')}>
                     <img alt="pdf" src={pdfLogo} width={80} height={100} />
-                    ОБЩЕЕ РАСПИСАНИЕ
+                    {t('documents.intitle.part3')}
                   </a>
               </div>
               </div>
@@ -1095,51 +1064,53 @@ const Home = () => {
       <FadeInSection>
         <div className={styles.wrapper}>
           <div className={styles.registration} id="registration">
-            <div className={styles.Title}>Регистрация</div>
-            <a className={styles.FormButton} href="https://choirolympicapplications.tilda.ws/dvo">ПОДАТЬ ЗАЯВКУ</a>
+            <div className={styles.Title}>{t('registration.title')}</div>
+            <a className={styles.FormButton} href="https://choirolympicapplications.tilda.ws/dvo">{t('registration.form')}</a>
           </div>
         </div>
       </FadeInSection>
       <FadeInSection>
         <div className={styles.wrapper}>
+        <div className={styles.Title}>{t('participants.title')}</div>
+        {i18n.language == 'en' && (<div className={styles.aboutDescription} style={{ textAlign: 'center' }}>This section will be updated</div>)}
+        {i18n.language !== 'en' && (
           <div className={styles.participants} id="participants">
-            <div className={styles.Title}>участники 2023</div>
-
-            <div
-              className={styles.participantsTable}
-              style={{ maxHeight: fullPart ? "100%" : "0px" }}
-            >
-              {participants.map((item) => (
-                <ControlledRefModalPart item={item} />
-              ))}
-            </div>
-
-            <div
-              className={styles.moreButton}
-              onClick={() => {
-                if (fullPart) {
-                  const elementToScroll = document.getElementById(
-                    "#participants"?.replace("#", "")
-                  );
-                  window.scrollTo({
-                    top: elementToScroll.offsetTop - 100,
-                    behavior: "smooth",
-                  });
-                }
-                setFullPart(!fullPart);
-              }}
-            >
-              <button>{fullPart ? "СКРЫТЬ" : "ПОКАЗАТЬ УЧАСТНИКОВ"}</button>
-            </div>
+          <div
+            className={styles.participantsTable}
+            style={{ maxHeight: fullPart ? "100%" : "0px" }}
+          >
+            {participants.map((item) => (
+              <ControlledRefModalPart item={item} />
+            ))}
           </div>
+
+          <div
+            className={styles.moreButton}
+            onClick={() => {
+              if (fullPart) {
+                const elementToScroll = document.getElementById(
+                  "#participants"?.replace("#", "")
+                );
+                window.scrollTo({
+                  top: elementToScroll.offsetTop - 100,
+                  behavior: "smooth",
+                });
+              }
+              setFullPart(!fullPart);
+            }}
+          >
+            <button>{fullPart ? "СКРЫТЬ" : "ПОКАЗАТЬ УЧАСТНИКОВ"}</button>
+          </div>
+        </div>
+      )}
         </div>
 
       </FadeInSection>
       <FadeInSection>
         <div className={styles.wrapper}>
           <div className={styles.about}>
-          <div className={styles.Title} id="jury">ЖЮРИ</div>
-          <div className={styles.aboutDescription} style={{ textAlign: 'center' }}>Cписок жюри будет обновлен позже</div>
+          <div className={styles.Title} id="jury">{t('jury.title')}</div>
+          <div className={styles.aboutDescription} style={{ textAlign: 'center' }}>{t('jury.text')}</div>
             <div className={styles.juryList}>
 
               
@@ -1279,37 +1250,38 @@ const Home = () => {
             <div className={styles.venues} id="venues">
               <div className={styles.venuesTitle}>
                 <div className={styles.title}>
-                  места <span className={styles.blue}>проведения</span> <br /> олимпиады
+                {t('venues.title.part1')}<span className={styles.blue}>{t('venues.title.part2')}</span><br />{t('venues.title.part3')}
                 </div>
                 <div className={styles.places}>
-                  <VenueCard img={V1} place='Концертный зал "Синий" ДВФУ' />
-                  <VenueCard img={V2} place="Конференц-зал «Средний» ДВФУ" />
+                  <VenueCard img={V1} place={t('venues.intitle.part1')} />
+                  <VenueCard img={V2} place={t('venues.intitle.part2')} />
                 </div>
               </div>
 
               <div className={styles.venuesList}>
 
                 <div className={styles.places}>
-                  <VenueCard img={V1} place='Концертный зал "Синий" ДВФУ' />
-                  <VenueCard img={V2} place="Конференц-зал «Средний» ДВФУ" />
+                <VenueCard img={V1} place={t('venues.intitle.part1')} />
+                <VenueCard img={V2} place={t('venues.intitle.part2')} />
                 </div>
-                <VenueCard img={V4} place="Приморская краевая филармония" />
+                <VenueCard img={V4} place={t('venues.intitle.part3')} />
                 <VenueCard
                   img={V5}
-                  place="Евангелическо-Лютеранская <br/> церковь св. Павла"
+                  place={t('venues.intitle.part4')}
                 />
                 <VenueCard
                   img={V6}
-                  place="Католический собор <br/> Пресвятой Богородицы"
+                  place={t('venues.intitle.part5')}
                 />
                 <VenueCard
                   img={V7}
-                  place="Центральная Музыкальная Школа"
+                  place={t('venues.intitle.part6')}
                 />
               </div>
             </div>
           </div>
         </FadeInSection>
+        {i18n.language !== 'en' && 
         <FadeInSection>
           <div id="results" className={styles.resultsWrapper}>
             <div className={styles.resultsTitle}><span className={styles.blue}>СКАЧАТЬ</span> РЕЗУЛЬТАТЫ</div>
@@ -1323,7 +1295,7 @@ const Home = () => {
                 </a>
             </div>
           </div>
-        </FadeInSection>
+        </FadeInSection>}
       </div>
     </div>
   );

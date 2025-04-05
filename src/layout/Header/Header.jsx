@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import { useTranslation } from "react-i18next";
 import { motion, useCycle } from "framer-motion";
 
 import styles from "./Header.module.scss";
@@ -15,6 +14,11 @@ import vkLogo from "../../assets/icons/vk-logo.svg";
 import youtubeLogo from "../../assets/icons/youtube.svg";
 import Icons from "../../common/icons";
 import { Button, DropdownButton } from "react-bootstrap";
+import i18n from '../../utils/trans.js'
+import { useTranslation } from "react-i18next";
+import { changeLanguage } from "i18next";
+
+
 
 
 const sidebar = {
@@ -48,40 +52,55 @@ const variants = {
   },
 };
 
+
 const menu = [
-  {
-    name: "Программа",
-    link: "#programm",
-  },
-  {
-    name: "Документы",
-    link: "#documents",
-  },
-  {
-    name: "Регистрация",
-    link: "#registration",
-  },
-  {
-    name: "Результаты",
-    link: "#results",
-  }
+  { nameKey: "menu.program", link: "#programm" },
+  { nameKey: "menu.documents", link: "#documents" },
+  { nameKey: "menu.registration", link: "#registration" },
+  { nameKey: "menu.results", link: "#results" }
 ];
 
-const Navigation = ({ toggleOpen, open }) => (
-  <motion.ul variants={variants} className={classNames(styles.mobileUl, {
-    [styles.under]: !open
-  })}>
-    {menu.map(i => (
-      <div onClick={() => toggleOpen()} key={i.link}>
-        <MenuItem i={i} key={i.link} />
-      </div>
-    ))}
-  </motion.ul>
-);
+const Navigation = ({ toggleOpen, open }) => {
+  const { t } = useTranslation();
+
+  return (
+    <motion.ul 
+      variants={variants} 
+      className={classNames(styles.mobileUl, {
+        [styles.under]: !open
+      })}
+    >
+      {menu.map(i => (
+        <div 
+          onClick={() => toggleOpen()} 
+          key={i.link}
+        >
+          <MenuItem 
+            i={{
+              ...i,
+              name: t(i.nameKey)  // Translate the menu item text
+            }} 
+            key={i.link} 
+          />
+        </div>
+      ))}
+    </motion.ul>
+  );
+};
+
 
 
 export const Header = () => {
-  const { t } = useTranslation();
+  const {i18n} = useTranslation();
+
+  const ChangeLanguage = () => {
+    if (i18n.language == 'en'){
+      i18n.changeLanguage('ru');
+    }
+    else{
+      i18n.changeLanguage('en');
+    }
+  };
 
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
@@ -109,7 +128,7 @@ export const Header = () => {
   const prevScrollY = useRef(0);
 
   const [goingUp, setGoingUp] = useState(false);
-  const [activeHash, setActiveHash] = useState('intro');
+  const [activeHash, setActiveHash] = useState('results');
 
   const hashMap = {
     'programm': "Программа",
@@ -180,6 +199,8 @@ export const Header = () => {
     );
   };
 
+  const {t} = useTranslation();
+
   return (
     <div className={styles.full}>
       <div className={styles.wrapper}>
@@ -191,22 +212,33 @@ export const Header = () => {
           <div className={styles.activeHash} style={{ display: width < 1300 && activeHash !== 'intro' ? 'block' : 'none' }}>
             {hashMap[activeHash]}
           </div>
-          <menu className={styles.menuWrapper}>
-            <a className={styles.FormButton} href="https://choirolympicapplications.tilda.ws/dvo">Заявка</a>
+           <menu className={styles.menuWrapper}>
+            <a 
+              className={styles.FormButton} 
+              href={t('header.button1url')}
+            >
+              {t('header.button1')}
+            </a>
+            
             <ul className={styles.menu}>
               {menu.map((menuItem) => (
                 <li key={menuItem.link} className={styles.menuItem}>
-                  <Link onClick={() => handleAnchorClick(menuItem.link)} to={menuItem.link} className={classNames({
-                    [styles.activeLink]: activeHash === menuItem.link.slice(1)
-                  })}>{menuItem.name}</Link>
+                  <Link 
+                    onClick={() => handleAnchorClick(menuItem.link)}
+                    to={menuItem.link}
+                    className={classNames({
+                      [styles.activeLink]: activeHash === menuItem.link.slice(1)
+                    })}
+                  >
+                    {t(menuItem.nameKey)}
+                  </Link>
                 </li>
               ))}
             </ul>
-            
           </menu>
-          {/*<div className={styles.LangButton}>
-            <Icons type='ruflag'></Icons>
-          </div>*/}
+          <div className={styles.LangButton} onClick={() => ChangeLanguage()}>
+            <Icons type={t('header.buttunflag')}></Icons>
+          </div>
           <div className={styles.networks}>
             <Icons type='vk' className={styles.vk} width={24} height={24} onClick={() => openVk()} />
             <Icons type='youtube' className={styles.youtube} width={24} height={24} onClick={() => openYoutube()} />

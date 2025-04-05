@@ -1,6 +1,17 @@
 const Icons = ({ type, ...props }) => {
 
     switch (type) {
+        case 'engflag':
+            return (
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 300 300">
+                <rect width="300" height="300" fill="#00247d"/>
+                <path d="M 0,0 L 300,300 M 300,0 L 0,300" stroke="#fff" stroke-width="60"/>
+                <path d="M 0,0 L 300,300 M 300,0 L 0,300" stroke="#cf142b" stroke-width="40"/>
+                <path d="M 150,150 v -30 L 30,0 H 0 z h 30 L 300,30 V 0 z v 30 L 270,300 H 300 z h -30 L 0,270 V 300 z" fill="#fff"/>
+                <path d="M 150,0 V 300 M 0,150 H 300" stroke="#fff" stroke-width="100"/>
+                <path d="M 150,0 V 300 M 0,150 H 300" stroke="#cf142b" stroke-width="60"/>
+                </svg>
+            )
         case 'ruflag':
             return (
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
