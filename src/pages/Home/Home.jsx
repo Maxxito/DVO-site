@@ -921,88 +921,81 @@ const Home = () => {
                     <AccordionItemButton>{t('programm.intitle.part1')}</AccordionItemButton>
                   </AccordionItemHeading>
                   <AccordionItemPanel>
-                    <table border="black">
-                      <thead className="tableHead">
-                        <th>Обозначение</th>
-                        <th>
-                          Название <br /> категории
-                        </th>
-                        <th>
-                          Возраст <br />
-                          участников
-                        </th>
-                        <th>
-                          Количество <br />
-                          участников
-                        </th>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>А1</td>
-                          <td>Младшие детские хоры</td>
-                          <td><i>7–17 лет</i></td>
-                          <td rowSpan={3} width={"60px"}><i>от 16</i></td>
-                        </tr>
-                        <tr>
-                          <td>А2</td>
-                          <td>Старшие детские хоры</td>
-                          <td><i>11–17 лет</i></td>
-                        </tr>
-                        <tr>
-                          <td>А3</td>
-                          <td>Хоры мальчиков и юношей</td>
-                          <td><i>7–17 лет</i></td>
-                        </tr>
-                        <tr>
-                          <td>А4</td>
-                          <td>Младшие детские вокальные<br></br>ансамбли</td>
-                          <td><i>7–17 лет</i></td>
-                          <td><i>6–12</i></td>
-                        </tr>
-                        <tr>
-                          <td>А5</td>
-                          <td>Старшие детские вокальные ансамбли</td>
-                          <td><i>7–17 лет</i></td>
-                          <td><i>6–12</i></td>
-                        </tr>
-                        <tr>
-                          <td>B1</td>
-                          <td>Однородные хоры</td>
-                          <td rowSpan={4}><i>без возрастных ограничений</i></td>
-                          <td rowSpan={2}><i>от 16</i></td>
-                        </tr>
-                        <tr>
-                          <td>B2</td>
-                          <td>Смешанные хоры</td>
-                        </tr>
-                        <tr>
-                          <td>B3</td>
-                          <td>Камерные хоры</td>
-                          <td><i>16-28</i></td>
-                        </tr>
-                        <tr>
-                          <td>B4</td>
-                          <td>Взрослые вокальные ансамбли</td>
-                          <td><i>6–12</i></td>
-                        </tr>
-                        <tr>
-                          <td>С1</td>
-                          <td>Духовная музыка</td>
-                          <td rowSpan={3}><i>без возрастных ограничений</i></td>
-                          <td rowSpan={3}><i>от 6</i></td>
-                        </tr>
-                        <tr>
-                          <td>С2</td>
-                          <td>Современная музыка</td>
-                        </tr>
-                        <tr>
-                          <td>С3</td>
-                          <td>Стилизация народной музыки</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    Допускается участие коллективов в нескольких категориях (не
-                    более трех).
+                  <table border="black">
+                    <thead className="tableHead">
+                      <tr>
+                        <th>{t("categoriesTable.headers.designation")}</th>
+                        <th>{t('categoriesTable.headers.categoryName')}</th>
+                        <th>{t('categoriesTable.headers.age')}</th>
+                        <th>{t('categoriesTable.headers.participants_number')}</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>A1</td>
+                        <td>{t('categoriesTable.categories.A1')}</td>
+                        <td><i>7-11</i></td>
+                        <td rowSpan={3} width="60px"><i>{t('categoriesTable.participantCounts.from_16')}</i></td>
+                      </tr>
+                      <tr>
+                        <td>A2</td>
+                        <td>{t('categoriesTable.categories.A2')}</td>
+                        <td><i>11-17</i></td>
+                      </tr>
+                      <tr>
+                        <td>A3</td>
+                        <td>{t('categoriesTable.categories.A3')}</td>
+                        <td><i>7-11</i></td>
+                      </tr>
+                      <tr>
+                        <td>A4</td>
+                        <td>{t('categoriesTable.categories.A4')}</td>
+                        <td><i>7-11</i></td>
+                        <td><i>6-12</i></td>
+                      </tr>
+                      <tr>
+                        <td>A5</td>
+                        <td>{t('categoriesTable.categories.A5')}</td>
+                        <td><i>11-17</i></td>
+                        <td><i>6-12</i></td>
+                      </tr>
+                      <tr>
+                        <td>B1</td>
+                        <td>{t('categoriesTable.categories.B1')}</td>
+                        <td rowSpan={4}><i>{t('categoriesTable.ageRanges.noRestriction')}</i></td>
+                        <td rowSpan={2}><i>{t('categoriesTable.participantCounts.from_16')}</i></td>
+                      </tr>
+                      <tr>
+                        <td>B2</td>
+                        <td>{t('categoriesTable.categories.B2')}</td>
+                      </tr>
+                      <tr>
+                        <td>B3</td>
+                        <td>{t('categoriesTable.categories.B3')}</td>
+                        <td><i>16-28</i></td>
+                      </tr>
+                      <tr>
+                        <td>B4</td>
+                        <td>{t('categoriesTable.categories.B4')}</td>
+                        <td><i>6-12</i></td>
+                      </tr>
+                      <tr>
+                        <td>C1</td>
+                        <td>{t('categoriesTable.categories.C1')}</td>
+                        <td rowSpan={3}><i>{t('categoriesTable.ageRanges.noRestriction')}</i></td>
+                        <td rowSpan={3}><i>{t('categoriesTable.participantCounts.from_6')}</i></td>
+                      </tr>
+                      <tr>
+                        <td>C2</td>
+                        <td>{t('categoriesTable.categories.C2')}</td>
+                      </tr>
+                      <tr>
+                        <td>C3</td>
+                        <td>{t('categoriesTable.categories.C3')}</td>
+                      </tr>
+                    </tbody>
+                  </table> 
+                    {t('categoriesTable.addendum')}
                   </AccordionItemPanel>
                 </AccordionItem>
                 <AccordionItem>

@@ -87,5 +87,37 @@
     },
     "participants": {
       "title": "Participants 2025"
-    }
+    },
+  "categoriesTable": {
+    "headers": {
+      "designation": "Designation",
+      "categoryName": "Category Name",
+      "age": "Age of participants",
+      "participants_number": "Number of Participants"
+    },
+    "categories": {
+      "A1": "Young children's choirs",
+      "A2": "Children's choirs",
+      "A3": "Boys and youths choirs",
+      "A4": "Young children's vocal ensembles",
+      "A5": "Children's vocal ensembles",
+      "B1": "Homogeneous Choirs",
+      "B2": "Mixed Choirs",
+      "B3": "Chamber Choirs",
+      "B4": "Adult Vocal Ensembles",
+      "C1": "Musica Sacra",
+      "C2": "Contemporary Music",
+      "C3": "Folk Music Stylization"
+    },
+    "ageRanges": {
+      "7_17": "7–17 years",
+      "11_17": "11–17 years",
+      "noRestriction": "No age restrictions"
+    },
+    "participantCounts": {
+      "from_16": "from 16",
+      "from_6": "from 6"
+    },
+    "addendum": "Participation in multiple categories ( three at most ) is allowed."
   }
+}

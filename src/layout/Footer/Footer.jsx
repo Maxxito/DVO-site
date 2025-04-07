@@ -38,6 +38,20 @@ export const Footer = () => {
                                     {t('footer.text.part1')}<br></br>{t('footer.text.part3')}
                                 </div>
                             </div>
+                            {i18n.language == 'en' && (
+                                <div className={styles.contact}>
+                                <div className={styles.contactTitle}>
+                                    Coordinator for Foreign Participants 
+                                </div>
+                                <div className={styles.info}>
+                                    Anna Belonogova<br></br>Tel.: +7 950 292 93 86
+                                </div>
+                                <div className={styles.contactTitle}>
+                                    Consultations in Chinese are available<br></br>
+                                    WeChat ID: bailing_AV
+                                </div>
+                            </div>
+                            )}
                             <div className={styles.contact}>
                                 <div className={styles.contactTitle}>
                                     {t('footer.intitle.part2')}
