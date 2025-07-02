@@ -1195,7 +1195,7 @@ const Home = () => {
                   <div className={styles.juryItem}>
                     <img src={J5} alt="jury" />
                     <span className={styles.juryName}>
-                      Ван Чао<br></br>(Шанхай, Китай)
+                      {t('jury.name5')}
                     </span>
                   </div>
                 }

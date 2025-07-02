@@ -44,7 +44,12 @@
     },
     "jury": {
       "title": "Jury",
-      "text": "The list of the Jury will be updated"
+      "text": "The list of the Jury will be updated",
+      "name1": "Alexander Zanorin\n(Saratov)",
+      "name2": "Alexey Petrov\n(Moscow)",
+      "name3": "Sergey Pleshak\n(Saint Petersburg)",
+      "name4": "Inessa Bodyako\n(Minsk, Belarus)",
+      "name5": "Wang Chao\n(Shanghai, China)"
     },
     "venues": {
       "title": {
