@@ -13,9 +13,6 @@ export const ControlledRefModalJury = ({ trigger, image, bio }) => {
             trigger
         } modal>
             <div className={styles.participantModal}>
-                <button className={styles.closeButton} onClick={closeTooltip}>
-                    X
-                </button>
                 <img
                     src={image}
                     className={styles.participantModalImage}
@@ -24,6 +21,10 @@ export const ControlledRefModalJury = ({ trigger, image, bio }) => {
                 <div className={styles.participantModalDesc} dangerouslySetInnerHTML={{ __html: bio}}>
 
                 </div>
+                
+                <button className={styles.closeButton} onClick={closeTooltip}>
+                    x
+                </button>
             </div>
         </Popup>
     );

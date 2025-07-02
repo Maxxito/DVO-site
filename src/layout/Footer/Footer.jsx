@@ -66,7 +66,7 @@ export const Footer = () => {
                                 {t('footer.intitle.part3')}
                             </div>
                             <div className={styles.info}>
-                                {/* <Icons type='telegram' className={styles.tg} width={24} height={24} onClick={() => openTg()}/> */}
+                                <Icons type='telegram' className={styles.tg} width={24} height={24} onClick={() => openTg()}/>
                                 <Icons type='vk' className={styles.vk} width={24} height={24} onClick={() => openVk()}/>
                                 <Icons type='youtube' className={styles.youtube} width={24} height={24} onClick={() => openYoutube()}/>
                             </div>
