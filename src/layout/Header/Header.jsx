@@ -49,7 +49,7 @@ const variants = {
 const menu = [
   { nameKey: "menu.program", link: "#programm" },
   { nameKey: "menu.documents", link: "#documents" },
-  { nameKey: "menu.registration", link: "#registration" },
+  // { nameKey: "menu.registration", link: "#registration" },
   { nameKey: "menu.jury", link: "#jury" },
   { nameKey: "menu.results", link: "#results" }
 ];
@@ -115,10 +115,8 @@ export const Header = () => {
     const element = document.getElementById(targetId);
 
     if (element) {
-      // Update URL hash without scrolling
       window.history.pushState(null, null, hash);
       
-      // Scroll to element with offset
       const headerOffset = 120;
       const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
       const offsetPosition = elementPosition - headerOffset;
@@ -128,12 +126,10 @@ export const Header = () => {
         behavior: "smooth"
       });
 
-      // Immediately set active hash
       setActiveHash(targetId);
     }
   };
 
-  // Scroll position tracker
   useEffect(() => {
     const handleScroll = () => {
       if (scrollTimeout.current) {
@@ -144,7 +140,6 @@ export const Header = () => {
         const sections = Object.values(sectionRefs.current).filter(Boolean);
         let currentActive = activeHash;
         
-        // Find which section is in view
         for (const section of sections) {
           const rect = section.getBoundingClientRect();
           const isInView = rect.top <= 150 && rect.bottom >= 150;
@@ -155,7 +150,6 @@ export const Header = () => {
           }
         }
 
-        // Update active hash if changed
         if (currentActive !== activeHash) {
           setActiveHash(currentActive);
         }
@@ -205,12 +199,12 @@ export const Header = () => {
           </div>
           
           <menu className={styles.menuWrapper}>
-            <a 
+            {/* <a 
               className={styles.FormButton} 
               href={t('header.button1url')}
             >
               {t('header.button1')}
-            </a>
+            </a> */}
             
             <ul className={styles.menu}>
               {menu.map((menuItem) => {

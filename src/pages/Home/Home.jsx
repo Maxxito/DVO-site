@@ -812,10 +812,10 @@ const Home = () => {
       </FadeInSection>
       <FadeInSection>
         <div className={styles.wrapper}>
-          <div className={styles.registration} id="registration">
+          {/* <div className={styles.registration} id="registration">
             <div className={styles.Title}>{t('registration.title')}</div>
             <a className={styles.FormButton} href="https://choirolympicapplications.tilda.ws/dvo">{t('registration.form')}</a>
-          </div>
+          </div> */}
         </div>
       </FadeInSection>
       <FadeInSection>
@@ -995,14 +995,14 @@ const Home = () => {
                   img={V5}
                   place={t('venues.intitle.part4')}
                 />
-                <VenueCard
+                {/* <VenueCard
                   img={V6}
                   place={t('venues.intitle.part5')}
                 />
                 <VenueCard
                   img={V7}
                   place={t('venues.intitle.part6')}
-                />
+                /> */}
               </div>
             </div>
           </div>
@@ -1010,7 +1010,7 @@ const Home = () => {
         {i18n.language !== 'en' && 
         <FadeInSection>
           <div id="results" className={styles.resultsWrapper} >
-            <div className={styles.resultsTitle}><span className={styles.blue}>СКАЧАТЬ</span> РЕЗУЛЬТАТЫ</div>
+            <div className={styles.resultsTitle}><span className={styles.blue}>РЕЗУЛЬТАТЫ</span> </div>
 
             <div className={styles.results}>
                 <a href="/Результаты2.pdf" download={"Результаты-2023.pdf"}>
